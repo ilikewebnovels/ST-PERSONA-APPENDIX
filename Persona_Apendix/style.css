@@ -1,0 +1,346 @@
+/* ================================================================
+   PERSONA APPENDIX v1.2 — STYLES
+   Native-feeling ST extension. No collapse. Unapologetic space.
+   ================================================================ */
+
+/* ───── Wrapper ───── */
+#persona-appendix-wrapper {
+    margin-top: 12px;
+    padding: 12px 14px 14px;
+    border: 1px solid var(--SmartThemeBorderColor, #444);
+    border-radius: 10px;
+    background: var(--SmartThemeBlurTintColor, rgba(20,20,20,0.45));
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ───── Header ───── */
+#persona-appendix-wrapper .pa-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+#persona-appendix-wrapper .pa-header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#persona-appendix-wrapper .pa-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    color: var(--SmartThemeBodyColor, #ddd);
+    user-select: none;
+}
+
+#persona-appendix-wrapper .pa-scope-badge {
+    font-size: 11px;
+    padding: 3px 9px;
+    border-radius: 5px;
+    background: rgba(255,255,255,0.07);
+    color: var(--SmartThemeBodyColor, #aaa);
+    user-select: none;
+}
+
+#persona-appendix-wrapper .pa-all-off-badge {
+    font-size: 10px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    background: rgba(255,80,80,0.15);
+    color: #f66;
+    display: none;
+    user-select: none;
+}
+#persona-appendix-wrapper .pa-all-off-badge.visible {
+    display: inline;
+}
+
+/* ───── Header buttons ───── */
+#persona-appendix-wrapper .pa-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#persona-appendix-wrapper .pa-icon-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 1.15rem;
+    border-radius: 7px;
+    border: 1px solid rgba(255,255,255,0.13);
+    background: rgba(255,255,255,0.05);
+    color: var(--SmartThemeBodyColor, #ccc);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s, transform 0.08s;
+}
+#persona-appendix-wrapper .pa-icon-btn:hover {
+    background: rgba(255,255,255,0.12);
+}
+#persona-appendix-wrapper .pa-icon-btn:active {
+    transform: scale(0.93);
+}
+
+#persona-appendix-wrapper .pa-btn-add {
+    color: #5ddf5d;
+    border-color: #3a7a3a;
+}
+
+#persona-appendix-wrapper .pa-btn-add:hover {
+    background: rgba(90,255,90,0.15);
+}
+
+#persona-appendix-wrapper .pa-btn-toggle-mode.active {
+    background: rgba(255,255,255,0.18);
+}
+
+/* ───── Search ───── */
+
+#persona-appendix-wrapper .pa-search-row {
+    margin: 6px 0 8px;
+}
+
+#persona-appendix-wrapper .pa-search-input {
+    width: 100%;
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(0,0,0,0.25);
+    color: var(--SmartThemeBodyColor,#ddd);
+    font-size: 13px;
+}
+
+/* ───── Tabs ───── */
+
+#persona-appendix-wrapper .pa-tabs {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+#persona-appendix-wrapper .pa-tab {
+    flex: 1;
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.05);
+    cursor: pointer;
+    font-size: 12px;
+}
+
+#persona-appendix-wrapper .pa-tab.active {
+    background: rgba(255,255,255,0.16);
+}
+
+#persona-appendix-wrapper .pa-tab.disabled-tab {
+    opacity: 0.35;
+    cursor: default;
+}
+
+#persona-appendix-wrapper .pa-tab-count {
+    opacity: 0.7;
+    font-size: 11px;
+}
+
+/* ───── Notes list ───── */
+
+#persona-appendix-wrapper .pa-notes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#persona-appendix-wrapper .pa-empty {
+    opacity: 0.6;
+    font-size: 13px;
+}
+
+/* ───── Note ───── */
+
+#persona-appendix-wrapper .pa-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 7px 8px;
+    border-radius: 8px;
+    min-height: 60px;
+    height: auto;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(0,0,0,0.25);
+    transition: none;
+}
+
+#persona-appendix-wrapper .pa-note.disabled {
+    opacity: 0.45;
+}
+
+#persona-appendix-wrapper .pa-note.search-miss {
+    display: none;
+}
+
+/* glow colors */
+
+#persona-appendix-wrapper .pa-note.enabled.color-red {
+    box-shadow: 0 0 14px rgba(255,60,60,0.35);
+}
+#persona-appendix-wrapper .pa-note.enabled.color-orange {
+    box-shadow: 0 0 14px rgba(255,140,0,0.35);
+}
+#persona-appendix-wrapper .pa-note.enabled.color-yellow {
+    box-shadow: 0 0 14px rgba(255,220,0,0.35);
+}
+#persona-appendix-wrapper .pa-note.enabled.color-green {
+    box-shadow: 0 0 14px rgba(80,255,120,0.35);
+}
+#persona-appendix-wrapper .pa-note.enabled.color-cyan {
+    box-shadow: 0 0 14px rgba(0,220,255,0.35);
+}
+#persona-appendix-wrapper .pa-note.enabled.color-blue {
+    box-shadow: 0 0 14px rgba(100,140,255,0.35);
+}
+#persona-appendix-wrapper .pa-note.enabled.color-purple {
+    box-shadow: 0 0 14px rgba(200,120,255,0.35);
+}
+#persona-appendix-wrapper .pa-note.enabled.color-pink {
+    box-shadow: 0 0 14px rgba(255,120,200,0.35);
+}
+
+/* ───── Drag handle ───── */
+
+#persona-appendix-wrapper .pa-drag-handle {
+    cursor: grab;
+    opacity: 0.6;
+    padding-top: 4px;
+    align-self: center;
+}
+
+/* ───── Toggle checkbox ───── */
+
+#persona-appendix-wrapper .pa-note-toggle {
+    align-self: center;
+}
+
+/* ───── Textarea ───── */
+
+#persona-appendix-wrapper .pa-note-text {
+    flex: 1;
+    resize: none;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--SmartThemeBodyColor,#ddd);
+    font-size: 13px;
+    line-height: 1.35em;
+    min-height: 60px;
+    overflow: hidden;
+    transition: height 0.1s ease;
+}
+
+/* ───── Delete ───── */
+
+#persona-appendix-wrapper .pa-note-delete {
+    border: none;
+    background: transparent;
+    color: #f66;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* ───── Color picker circle ───── */
+
+#persona-appendix-wrapper .pa-color-picker-circle {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.25);
+    flex-shrink: 0;
+    align-self: center;
+}
+
+#persona-appendix-wrapper .pa-native-color {
+    width: 24px;
+    height: 24px;
+    margin: -3px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* ───── New note area ───── */
+
+#persona-appendix-wrapper .pa-new-note-row {
+    margin-top: 10px;
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+}
+
+#persona-appendix-wrapper .pa-new-note-row.visible {
+    display: flex;
+}
+
+#persona-appendix-wrapper .pa-new-note-input {
+    flex: 1;
+    min-height: 60px;
+    padding: 8px;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--SmartThemeBodyColor);
+    font-size: 0.95em;
+    resize: vertical;
+    font-family: inherit;
+}
+
+#persona-appendix-wrapper .pa-new-note-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 6px;
+}
+
+#persona-appendix-wrapper .pa-new-note-confirm {
+    background: #3a7a3a;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+#persona-appendix-wrapper .pa-new-note-cancel {
+    background: rgba(255,255,255,0.1);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* ───── Import / Export row ───── */
+
+#persona-appendix-wrapper .pa-io-row {
+    display: none;
+    margin-top: 8px;
+    gap: 6px;
+}
+
+#persona-appendix-wrapper .pa-io-row.visible {
+    display: flex;
+}
+
+#persona-appendix-wrapper .pa-io-btn {
+    flex: 1;
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.06);
+    cursor: pointer;
+}
